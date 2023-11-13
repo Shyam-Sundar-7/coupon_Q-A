@@ -21,13 +21,14 @@ def generate_data():
         offer = random.choice(offers)
         expiring_days = random.choice(expiration_days)
         sentence = f"🌟 Grab {offer} off on {brand} {category}! Limited offer, only {expiring_days} days left!"
-        data.append([_, category, brand, offer, expiring_days,sentence])
+        data.append([category, brand, offer, expiring_days,sentence])
 
     return data
 
 # Create a DataFrame
-columns = ["id", "category", "brand", "offers", "expiring_in_days","Sentence"]
+columns = ["category", "brand", "offers", "expiring_in_days","Sentence"]
 df = pd.DataFrame(generate_data(), columns=columns)
+df.drop_duplicates(inplace=True)
 
 # Display the DataFrame
 print(df.head())
