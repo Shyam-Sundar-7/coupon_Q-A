@@ -44,9 +44,11 @@ def get_response():
     )
 
 
-    response = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", 
+    response = RetrievalQA.from_chain_type(llm=llm, 
+                                         chain_type="stuff", 
                                          input_key="query",
-                                         retriever=retriever, return_source_documents=True,
+                                         retriever=retriever, 
+                                         return_source_documents=True,
                                          chain_type_kwargs={"prompt": PROMPT},
                                          callbacks=[StdOutCallbackHandler()],
                                          verbose=True,
@@ -77,9 +79,16 @@ def results(query):
     out=response(query)
     return output_format(out["result"]),getid(out["source_documents"])
 
+
 if __name__=="__main__":
-    load_data()
-    res,source=results("Do you have offers in coach within week expiring coupons?")
-    print(res)
-    print("\n\n")
-    print(source)
+    # load_data()
+    res,source=results("is there any offers in electronics brands within 14 days expiring?")
+    # print(res)
+    if not (re.search("I don't know",res)):
+        print(res)
+        print("\n\n")
+        print("You can look into other offers from the following results:\n")
+        print(source)
+    else:
+        print("I don't know.")
+        print("I cant suggest you other suggestions for your search")
