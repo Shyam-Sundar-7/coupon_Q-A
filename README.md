@@ -19,7 +19,7 @@ This is an end to end LLM project based on openai and Langchain. We are building
 1.Clone this repository to your local machine using:
 
 ```bash
-  git clone https://github.com/Shyam-Sundar-7/coupon_recomendation.git
+  git clone https://github.com/Shyam-Sundar-7/coupon_Q-A.git
 ```
 
 
