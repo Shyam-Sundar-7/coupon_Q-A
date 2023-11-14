@@ -10,7 +10,7 @@ import re
 import openai
 from langchain_helper import load_data, get_response, getid, output_format, results
 
-"🦜🔗 Coupon Suggestions App"
+st.title("🦜🔗 Coupon Q&A")
 
 with st.sidebar:
     st.title('🤖💬 OpenAI Chatbot')
@@ -35,11 +35,11 @@ with st.sidebar:
     st.write(context+"\n\n")
     brands_per_category
 
-llm=OpenAI(temperature=0.2,api_key=os.environ["OPENAI_API_KEY"])
+llm=OpenAI(temperature=0.2,api_key=openai.api_key)
 
 
 vectordb_file_path = "vectordb"
-instructor_embeddings = OpenAIEmbeddings(api_key=os.environ["OPENAI_API_KEY"])
+instructor_embeddings = OpenAIEmbeddings(api_key=openai.api_key)
 # Load the CSV file
 data = pd.read_csv('data_2.csv')
 
