@@ -1,4 +1,4 @@
-# coupon_Q&A: Question and Answer System Based on OpeanAI and Langchain for E-commerce company. 
+# coupon_Q&A: Question and Answer System Based on OpeanAI and Langchain.
 
 This is an end to end LLM project based on openai and Langchain. We are building a Q&A system for an e-commerce to provide coupons and offers using llm. This system will provide a streamlit based user interface for students where they can ask questions and get answers. 
 
@@ -22,7 +22,7 @@ This is an end to end LLM project based on openai and Langchain. We are building
   git clone https://github.com/Shyam-Sundar-7/coupon_recomendation.git
 ```
 
-```
+
 3. Install the required dependencies using pip:
 
 ```bash
