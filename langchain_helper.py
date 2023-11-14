@@ -33,7 +33,7 @@ def get_response():
 
     prompt_template = """Given the following context and a question, generate an answer based on this context only.
     In the answer try to provide as much text as possible from "response" section in the source document context without making much changes.
-    If the answer is not found in the context, kindly state "I don't know." Don't try to make up an answer.
+    If the answer is not found in the context, kindly state "I don't know." Don't try to make up an answer.  You are about to find any offers available for the question from the user and list the required content.
 
     CONTEXT: {context}
 
@@ -82,9 +82,9 @@ def results(query):
 
 if __name__=="__main__":
     # load_data()
-    res,source=results("is there any offers in electronics brands within 14 days expiring?")
+    res,source=results("do you have any products in apple and samsung?")
     # print(res)
-    if not (re.search("I don't know",res)):
+    if not (re.search(" I don't know",res)):
         print(res)
         print("\n\n")
         print("You can look into other offers from the following results:\n")
