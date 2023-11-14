@@ -13,17 +13,6 @@ from langchain_helper import load_data, get_response, getid, output_format, resu
 st.title("🦜🔗 Coupon Q&A")
 
 with st.sidebar:
-    st.title('🤖💬 OpenAI Chatbot')
-    if 'OPENAI_API_KEY' in st.secrets:
-        st.success('API key already provided!', icon='✅')
-        openai.api_key = st.secrets['OPENAI_API_KEY']
-    else:
-        openai.api_key = st.text_input('Enter OpenAI API token:', type='password')
-        if not (openai.api_key.startswith('sk-') and len(openai.api_key)==51):
-            st.warning('Please enter your credentials!', icon='⚠️')
-        else:
-            st.success('Proceed to entering your prompt message!', icon='👉')
-    
     brands_per_category = {
         "electronics": ["Sony", "Samsung", "LG", "Apple", "Dell"],
         "jewelry": ["Tiffany", "Cartier", "Pandora", "Swatch", "Bvlgari"],

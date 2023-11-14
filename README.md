@@ -28,7 +28,11 @@ This is an end to end LLM project based on openai and Langchain. We are building
 ```bash
   pip install -r requirements.txt
 ```
-4.Acquire an api key through openai 
+4.Acquire an api key through openai and store the key in .env file as 
+
+```bash
+  OPENAI_API_KEY="sk-**********************************"
+```
 
 ## Usage
 
@@ -48,3 +52,12 @@ streamlit run main.py
 
 - The model struggles to comprehend questions that involve multiple products. Its performance is noticeably better when dealing with single-product inquiries.
 - Implementing a chatbot to handle checkout details and help users finalize their product selections from the suggested list could enhance customer engagement with the app.
+
+
+## Local Setup Output in Streamlit
+
+<div style="text-align: center;">
+  <video src="video.mp4" controls width="400" height="300">
+    Your browser does not support the video tag.
+  </video>
+</div>

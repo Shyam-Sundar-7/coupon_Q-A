@@ -34,6 +34,8 @@ def get_response():
     prompt_template = """Given the following context and a question, generate an answer based on this context only.
     In the answer try to provide as much text as possible from "response" section in the source document context without making much changes.
     If the answer is not found in the context, kindly state "I don't know." Don't try to make up an answer.  You are about to find any offers available for the question from the user and list the required content.
+    You are searching for the best coupons available for the products
+    you are looking for offers on the following products:
 
     CONTEXT: {context}
 
