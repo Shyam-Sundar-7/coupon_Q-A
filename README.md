@@ -56,8 +56,7 @@ streamlit run main.py
 
 ## Local Setup Output in Streamlit
 
-<div style="text-align: center;">
-  <video src="video.mp4" controls width="400" height="300">
-    Your browser does not support the video tag.
-  </video>
-</div>
+
+https://github.com/Shyam-Sundar-7/coupon_Q-A/assets/101181076/f5e5c22b-89fc-4e57-b9e8-d3aeecb9afe6
+
+
